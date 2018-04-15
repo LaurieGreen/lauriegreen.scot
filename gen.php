@@ -21,6 +21,13 @@
             $('#gifholder').attr("src", data);
         });
     });
+    $(document).ready(function(){
+        //$.get("read.php", function(data, status){   
+        // do stuff with data        
+        //    $('#gifholder').attr("src", data);
+        //});
+        alert("called");
+	});
 </script>
 
 </body>
