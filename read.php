@@ -16,7 +16,9 @@ if ($result->num_rows > 0) {
     	array_push($gifs, $row["url"]);
     }
     //echo $gifs[rand(0, $gifs.count())];
-    echo $gifs[rand(0, count($gifs)-1)];
+    //echo $gifs[rand(0, count($gifs)-1)];
+    shuffle($gifs);
+    echo json_encode($gifs);
 } else {
     echo "0 results";
 }

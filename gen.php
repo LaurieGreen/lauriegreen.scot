@@ -15,18 +15,28 @@
 </div>
 
 <script>
+	var gifArray;
+	var count = 0;
     $("#read").click(function(){
-        $.get("read.php", function(data, status){   
-        // do stuff with data        
-            $('#gifholder').attr("src", data);
-        });
+    	if (count < gifArray.length - 1)
+    	{
+    		$('#gifholder').attr("src", gifArray[count]);
+    	}
+    	else 
+    	{
+    		count = 0;
+    	}
+    	count++;
+    	//console.log("Count: "+count);
     });
     $(document).ready(function(){
-        //$.get("read.php", function(data, status){   
+        $.get("read.php", function(data, status){   
         // do stuff with data        
-        //    $('#gifholder').attr("src", data);
-        //});
-        alert("called");
+            //$('#gifholder').attr("src", data);
+            gifArray = JSON.parse(data);
+            //console.log("Array Contents: "+data);
+            //console.log("Array Length: "+gifArray.length);
+        });
 	});
 </script>
 
