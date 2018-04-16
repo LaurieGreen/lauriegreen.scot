@@ -8,16 +8,21 @@
 <title>Laurie's Page</title>
 </head>
 <body>
-
-<div>
-    <img id="gifholder" src="http://i.imgur.com/pg5qRqS.gif"></br>
-    <button id="read">New Gif</button>
+<div id="mainPageView">
+<header>Header</header>
+	<div id="gifandbuttonHolder">
+		<div id="gifDiv">
+	    	<!-- <img id="gifholder" src="http://i.imgur.com/pg5qRqS.gif"> -->
+	    	<img id="gifholder" src="http://i.imgur.com/3YuVnAv.gif">
+	    </div>
+	    <button id="readButton">New Gif!</button>
+	</div>
+	<footer>Footer</footer>
 </div>
-
 <script>
 	var gifArray;
 	var count = 0;
-    $("#read").click(function(){
+    $("#readButton").click(function(){
     	if (count < gifArray.length - 1)
     	{
     		$('#gifholder').attr("src", gifArray[count]);
