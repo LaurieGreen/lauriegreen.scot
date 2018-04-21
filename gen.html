@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<title>Laurie's Page</title>
+</head>
+<body>
+<div id="mainPageView">
+<header>Header</header>
+	<div id="gifandbuttonHolder">
+		<div id="gifDiv">
+	    	<!-- <img id="gifholder" src="http://i.imgur.com/pg5qRqS.gif"> -->
+	    	<img id="gifholder" src="http://i.imgur.com/3YuVnAv.gif">
+	    </div>
+	    <button id="readButton">New Gif!</button>
+	</div>
+	<footer>Footer</footer>
+</div>
+<script>
+	var gifArray;
+	var count = 0;
+    $("#readButton").click(function(){
+    	if (count < gifArray.length - 1)
+    	{
+    		$('#gifholder').attr("src", gifArray[count]);
+    	}
+    	else 
+    	{
+    		count = 0;
+    	}
+    	count++;
+    	//console.log("Count: "+count);
+    });
+    $(document).ready(function(){
+        $.get("read.php", function(data, status){   
+        // do stuff with data        
+            //$('#gifholder').attr("src", data);
+            gifArray = JSON.parse(data);
+            //console.log("Array Contents: "+data);
+            //console.log("Array Length: "+gifArray.length);
+        });
+	});
+</script>
+
+</body>
+</html>

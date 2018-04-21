@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: lightgrey;
     font-family: verdana;
 }
 
@@ -19,6 +19,11 @@ h1 {
 
 }
 
+#mainPageView{
+	background-color: lightblue;
+	width: 80%;
+	margin: auto;
+}
 
 #tableHolder{
 	position: absolute;
@@ -34,4 +39,20 @@ h1 {
 	left:500px;
 	width: 500px;
 	height: 200px;
+}
+
+#gifandbuttonHolder{
+	margin: auto;
+	text-align: center;
+}
+
+#gifholder{
+	max-width: 300px;
+	max-height: 300px;
+}
+
+#gifDiv{
+	width: 310px;
+	height: 310px;
+  	margin: auto;
 }
