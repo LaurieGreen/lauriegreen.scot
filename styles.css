@@ -22,7 +22,6 @@ h1 {
 #mainPageView{
 	background: linear-gradient(lightblue, lightgrey);
 	width: 80%;
-	min-width: 310px;
 	margin: auto;
 }
 
