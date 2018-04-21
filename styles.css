@@ -1,5 +1,5 @@
 body {
-    background-color: lightgrey;
+    background: lightgrey;
     font-family: verdana;
 }
 
@@ -20,7 +20,7 @@ h1 {
 }
 
 #mainPageView{
-	background-color: lightblue;
+	background: linear-gradient(lightblue, lightgrey);
 	width: 80%;
 	margin: auto;
 }
