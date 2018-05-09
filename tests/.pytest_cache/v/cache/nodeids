@@ -1,3 +1,4 @@
 [
-  "test_homepage.py::test_example"
+  "test_homepage.py::test_title", 
+  "test_homepage.py::test_header"
 ]
