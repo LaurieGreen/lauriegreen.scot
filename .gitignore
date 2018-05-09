@@ -3,5 +3,5 @@ gifs.txt
 gittoken.txt
 css/
 webfonts/
-*.pytest_cache/*/*
+*.pytest_cache/
 __pycache__
